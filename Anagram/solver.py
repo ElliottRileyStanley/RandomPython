@@ -4,5 +4,5 @@ letters = ["k", "b", "k", "d", "e", "w", "k", "i", "a"]
 
 for word in word_list:
     for letter in word:
-        if letter in 
+        pass
 print(word_list[0])
