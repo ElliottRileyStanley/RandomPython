@@ -1,7 +1,5 @@
 import random
-from pathlib import Path
 import shutil
-import os
 
 strat = []
 percent_changed = 0.1
