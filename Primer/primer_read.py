@@ -4,10 +4,10 @@ import random
 import time
 
 strat = open(r'Primer\mathstrat.text').readlines()
-heads = 1
-tails = 0
+heads = 0
+tails = 1
 flips = 100
-just_accused = 1
+just_accused = 0
 
 def calibrate_mouse():
     input("Press enter when you are in position")
@@ -24,8 +24,8 @@ def choiceaoeu(heads, tails, flips, strat):
     if heads + tails > 15:
         return (random.randrange(1,2))
     else:
-        print(int(((16*17/2)+1)*min(flips, 14)+((heads+tails)*(heads+tails+1)/2)+tails))
-        return strat[int(((16*17/2)+1)*min(flips, 15)+((heads+tails)*(heads+tails+1)/2)+tails)][0]
+        print(136*min(flips, 15)+1+((heads+tails)*(heads+tails+1)/2)+tails)
+        return strat[int(136*min(flips, 15)+1+((heads+tails)*(heads+tails+1)/2)+tails)][0]
     
 
 heads1x, heads1y = calibrate_mouse()
@@ -46,11 +46,11 @@ while flips >=0:
         pyautogui.click(flipx, flipy)
     elif int(choice) == 1:
         pyautogui.click(fairx, fairy)
-        time.sleep(3)
     elif int(choice) == 2:
         pyautogui.click(cheatx, cheaty)
-        time.sleep(3)
 
+    time.sleep(5)
+    
     im_new = pyautogui.screenshot()
     
     if int(choice) == 0:
@@ -89,3 +89,6 @@ while flips >=0:
         just_accused = 2
     just_accused -= 1
     print(heads, tails, flips)
+
+
+pyautogui.click(cheatx, cheaty)
