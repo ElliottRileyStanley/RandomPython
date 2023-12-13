@@ -55,4 +55,3 @@ up = find_edges(firstx, firsty, startcolor)[1]
 difference = find_edges(secondx, secondy, startcolor)[0]-left
 left -= difference
 up -= difference
-
