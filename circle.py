@@ -1,11 +1,24 @@
 import math
 import pyautogui
 
-value = 0
+pyautogui.PAUSE = 0.01
 
-while value < 6.28:
-    pyautogui.moveTo(math.cos(value)*400+1920, math.sin(value)*400+560, 0)
-    if value == 0:
-        pyautogui.mouseDown()
-    value += 0.09
-pyautogui.mouseUp()
+def attempt_one(centerx, centery, radius):
+    value = 0
+    while value < math.pi*2+0.00001:
+        pyautogui.moveTo(math.cos(value)*radius+centerx, math.sin(value)*radius+centery, 0)
+        if value == 0:
+            pyautogui.mouseDown()
+        value += math.pi*2/1000
+    pyautogui.mouseUp()
+
+def attempt_two(centerx, centery, radius):
+    pyautogui.moveTo(centerx+radius, centery)
+    pyautogui.mouseDown()
+    pyautogui.moveTo(centerx, centery+radius)
+    pyautogui.moveTo(centerx-radius, centery)
+    pyautogui.moveTo(centerx, centery-radius)
+    pyautogui.moveTo(centerx+radius, centery)
+    pyautogui.mouseUp()
+
+attempt_one(1440, 557, 300)
