@@ -9,7 +9,7 @@ def attempt_one(centerx, centery, radius):
         pyautogui.moveTo(math.cos(value)*radius+centerx, math.sin(value)*radius+centery, 0)
         if value == 0:
             pyautogui.mouseDown()
-        value += math.pi*2/1000
+        value += math.pi*2/75
     pyautogui.mouseUp()
 
 def attempt_two(centerx, centery, radius):
@@ -22,3 +22,5 @@ def attempt_two(centerx, centery, radius):
     pyautogui.mouseUp()
 
 attempt_one(1440, 557, 300)
+
+#I'm working
