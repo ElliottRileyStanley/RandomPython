@@ -11,8 +11,8 @@ while True:
         if event.type == pygame.QUIT:
             sys.exit()
         if event.type == pygame.MOUSEMOTION:
-            x =+ pygame.mouse.get_pos()[0]
-            y =+ pygame.mouse.get_pos()[1]
+            currentx =+ pygame.mouse.get_pos()[0]
+            currenty =+ pygame.mouse.get_pos()[1]
             playerrect.update(x-5, y-5, 10, 10)
         
     
