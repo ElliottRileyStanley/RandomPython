@@ -21,6 +21,4 @@ def attempt_two(centerx, centery, radius):
     pyautogui.moveTo(centerx+radius, centery)
     pyautogui.mouseUp()
 
-attempt_one(1440, 557, 300)
-
-#I'm working
+attempt_two(1920, 557, 300)
