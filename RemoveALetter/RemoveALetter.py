@@ -1,4 +1,4 @@
-word_list = open(r'C:\Users\Ellio\OneDrive\Desktop\Python\Random\Dictionary.txt').readlines()
+word_list = open(r'Dictionary.txt').readlines()
 for word_index in range(0, len(word_list)):
     word_list[word_index] = word_list[word_index][:-1]
 

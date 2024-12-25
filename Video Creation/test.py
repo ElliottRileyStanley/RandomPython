@@ -7,11 +7,9 @@ start_name = "Black"
 end_color = (255, 0, 255)
 end_name = "Neon Pink"
 
-font = ImageFont.truetype(r'Python\OddvalText-SemiBold.ttf', 20)
+font = ImageFont.truetype(r'C:\Users\Ellio\OneDrive\Desktop\Coding\Python\Random\Video Creation\ELEGANTTYPEWRITER.ttf', 20)
 
-frames = []
-
-result = cv2.VideoWriter(r'Python\video.avi', cv2.VideoWriter_fourcc(*'MJPG'), 60, (1080, 1920))
+result = cv2.VideoWriter(r'Video Creation\video.avi', cv2.VideoWriter_fourcc(*'MJPG'), 60, (1080, 1920))
 
 for x in range(360):
     image = ImageDraw.Draw(Image.new("RGB", (1080, 1920)))
