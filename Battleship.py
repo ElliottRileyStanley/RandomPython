@@ -40,9 +40,7 @@ def randomBoard(boardWidth, boardHeight, shipLengths):
                     for y in range(yStart, yStart + shipLength):
                         newBoard[y][xStart] = 1
                     doesFit = True
-
         board = newBoard
-
     printBoard(board)
 
 
