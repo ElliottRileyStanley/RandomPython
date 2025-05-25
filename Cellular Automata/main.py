@@ -3,7 +3,7 @@ import numpy as np
 import random
 
 width, height = 300, 480
-numFrames = 5
+numFrames = 10
 
 def new_frame(old):
     new = [[0 for _ in range(height)] for _ in range(width)]

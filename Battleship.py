@@ -17,10 +17,8 @@ def randomBoard(boardWidth, boardHeight, shipLengths):
             newBoard = copy.deepcopy(board)
             rotation = random.randint(0, 1)
             if rotation == 0:
-                # horizontal
                 xStart = random.randint(0, boardWidth - shipLength)
                 yStart = random.randint(0, boardHeight - 1)
-                # check if all positions are free
                 fits = True
                 for x in range(xStart, xStart + shipLength):
                     if board[yStart][x] == 1:
@@ -31,7 +29,6 @@ def randomBoard(boardWidth, boardHeight, shipLengths):
                         newBoard[yStart][x] = 1
                     doesFit = True
             else:
-                # vertical
                 xStart = random.randint(0, boardWidth - 1)
                 yStart = random.randint(0, boardHeight - shipLength)
                 fits = True
