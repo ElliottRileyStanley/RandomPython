@@ -40,9 +40,7 @@ def randomBoard(boardWidth, boardHeight, shipLengths):
                     for y in range(yStart, yStart + shipLength):
                         newBoard[y][xStart] = 1
                     doesFit = True
-
         board = newBoard
-
     printBoard(board)
 
 
@@ -75,7 +73,7 @@ while True:
         print("Please input an integer. If done, input \"done\"")
         continue
 
-if sum(shipLengths) > boardWidth * boardHeight:
+if (sum(shipLengths) > boardWidth * boardHeight) or (max(shipLengths) > max(boardWidth, boardHeight)):
     print("Impossible to place all ships, please try again")
 else:
     print()
